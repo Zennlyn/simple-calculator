@@ -57,7 +57,8 @@ function symFunction(symbol) {
       mathFunction(symbol);
       break;
     case "+/−":
-      display = "-" + display;
+      const numDisplay = parseFloat(display);
+      display = (numDisplay * -1).toString();
       break;
     case ".":
       if (!display.includes(".")) {
